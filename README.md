@@ -1,8 +1,7 @@
 # Boston-Housing-Prices
 Predict the selling price of a new home in Boston, Massachusetts area using Regression method in R/Rstudio
 
-#Regression Analysis 
-
+#start by cleaning the R environment
 rm(list=ls())
 
 my.data<-read.csv('Housing_data.csv',header=TRUE,sep=',')
@@ -100,7 +99,7 @@ plot(density(Res))
 ypred=coef(Regmodel)[1]*my.data$PCCR+coef(Regmodel)[2]*my.data$PRLZ+coef(Regmodel)[3]*my.data$NOX+coef(Regmodel)[4]*my.data$AVR+
   coef(Regmodel)[5]*my.data$AGE+coef(Regmodel)[6]*my.data$DIS+coef(Regmodel)[7]*my.data$RAD+coef(Regmodel)[8]*my.data$TAX
 
-# Created my own cost function for calculation of errors
+# Created own cost function for calculation of errors
 mycost<-function(yhat,y){
   cost=sum((yhat-y)^2)/length(y)
   return(cost)
