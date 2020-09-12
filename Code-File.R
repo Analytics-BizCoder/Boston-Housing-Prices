@@ -1,4 +1,4 @@
-#Assignment No 2_Part 1
+
 #Regression Analysis 
 
 rm(list=ls())
@@ -92,7 +92,7 @@ abline(-3*sd(Res),0,col="red",lty=2)
 # Density plotting for distribution check
 plot(density(Res))
 
-#Extra Tasks for Answers to Questions
+
 
 # Making predictions model based on the coefficients 
 ypred=coef(Regmodel)[1]*my.data$PCCR+coef(Regmodel)[2]*my.data$PRLZ+coef(Regmodel)[3]*my.data$NOX+coef(Regmodel)[4]*my.data$AVR+
